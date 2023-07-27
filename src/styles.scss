@@ -1,3 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
 @import 'app/core/sass/normalize';
 
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
