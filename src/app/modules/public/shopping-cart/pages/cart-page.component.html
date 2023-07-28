@@ -1,18 +1,12 @@
 <h4 class="title">Mi Carrito</h4>
 
-<app-cart-item></app-cart-item>
-<app-cart-item></app-cart-item>
+<div class="container-item">
+  <app-cart-item *ngFor="let item of listCartItems" [cartItem]="item"></app-cart-item>
+</div>
 
-<p class="total"><span class="total-label">Total:</span> $ 50.000</p>
+<p class="total">Total: <span class="total-label">$ 50.000</span></p>
 
-<button mat-raised-button color="primary">
-  <div class="btn-send">
-    <span>Finalizar pedido</span>
-    <i class="fa-solid fa-share-from-square"></i>
-  </div>
-</button>
-
-<button  ly-button raised bg="primary">
+<button mat-raised-button color="primary" class="btn">
   <div class="btn-send">
     <span>Finalizar pedido</span>
     <i class="fa-solid fa-share-from-square"></i>

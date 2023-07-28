@@ -4,10 +4,9 @@ import { CommonModule } from '@angular/common';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutPageComponent } from './layout-page.component';
 
-// Importaciónes de libreria alyle
-import { LyButtonModule } from "@alyle/ui/button";
-import { LyMenuModule } from "@alyle/ui/menu";
 
+
+import { HeaderComponent } from "../../../shared/components/header/header.component";
 
 @NgModule({
   declarations: [
@@ -15,11 +14,10 @@ import { LyMenuModule } from "@alyle/ui/menu";
   ],
   imports: [
     CommonModule,
-    LyButtonModule,
-    LyMenuModule,
+
+    HeaderComponent,
 
     LayoutRoutingModule,
-
   ]
 })
 export class LayoutModule { }

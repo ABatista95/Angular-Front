@@ -1,0 +1,15 @@
+<p>header works!</p>
+<button ly-button
+        [lyMenuTriggerFor]="menu"
+        [openOnHover]="true"
+>Menu</button>
+<h1 routerLink="/">My Pagina</h1>
+
+<ng-template #menu let-T>
+  <ly-menu
+    [ref]="T"
+    [hasBackdrop]="false"
+  >
+    <button ly-button ly-menu-item routerLink="shopping_cart"><span>Ir a carrito</span></button>
+  </ly-menu>
+</ng-template>

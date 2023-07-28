@@ -1,9 +1,4 @@
 <header class="header">
-  <button ly-button
-          [lyMenuTriggerFor]="menu"
-          [openOnHover]="true"
-  >Menu</button>
-  <h1 routerLink="/">My Pagina</h1>
 </header>
 
 <div class="main-container">
@@ -14,11 +9,4 @@
   <h4 style="font-size: 1.6em">Desarrollado por TingCol</h4>
 </footer>
 
-<ng-template #menu let-T>
-  <ly-menu
-    [ref]="T"
-    [hasBackdrop]="false"
-  >
-    <button ly-button ly-menu-item routerLink="shopping_cart"><span>Ir a carrito</span></button>
-  </ly-menu>
-</ng-template>
+

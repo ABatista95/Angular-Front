@@ -10,7 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: 'shopping_cart',
-        loadChildren: () => import('../../public/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule)
+        loadChildren: () => import('../../public/shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule),
+        title: "TingCol | Detalle del carrito de compra"
       }
     ]
   }

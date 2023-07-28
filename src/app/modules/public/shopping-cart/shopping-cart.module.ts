@@ -25,9 +25,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    LyGridModule,
-    LyButtonModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class ShoppingCartModule { }
