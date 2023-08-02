@@ -1,15 +1,20 @@
-<p>header works!</p>
-<button ly-button
-        [lyMenuTriggerFor]="menu"
-        [openOnHover]="true"
->Menu</button>
-<h1 routerLink="/">My Pagina</h1>
+<div class="nav">
+  <mat-toolbar class="nav-toolbar">
+    <button mat-icon-button (click)="btnMenu.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-<ng-template #menu let-T>
-  <ly-menu
-    [ref]="T"
-    [hasBackdrop]="false"
-  >
-    <button ly-button ly-menu-item routerLink="shopping_cart"><span>Ir a carrito</span></button>
-  </ly-menu>
-</ng-template>
+    <h3 class="nav-h3">TingCol</h3>
+
+    <div>
+      <button mat-icon-button aria-label="Example icon-button with heart icon">
+        <i class="fa-regular fa-circle-user"></i>
+      </button>
+
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <i class="fa-solid fa-cart-shopping" style="margin-right: 5px; font-size: .9em"></i>
+        <span matBadge="15" matBadgeColor="warn"></span>
+      </button>
+    </div>
+  </mat-toolbar>
+</div>

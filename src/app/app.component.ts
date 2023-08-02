@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 /* Importaciones de libreria alyle */
 import { StyleRenderer, ThemeVariables, lyl } from '@alyle/ui';
+import { LoggerService } from "@core/services/logger.service";
 
 const STYLES = (theme: ThemeVariables) => ({
   $global: lyl `{
@@ -28,13 +29,13 @@ const STYLES = (theme: ThemeVariables) => ({
     StyleRenderer
   ]
 })
-export class AppComponent {
+export class AppComponent{
   readonly classes = this.sRenderer.renderSheet(STYLES, true); // Implementación para libreria alyle
 
   title = 'P3-Validations';
 
   constructor(
-    readonly sRenderer: StyleRenderer // Implementación para libreria alyle
+    readonly sRenderer: StyleRenderer, // Implementación para libreria alyle
   ) {
   }
 }

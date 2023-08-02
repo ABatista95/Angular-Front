@@ -1,4 +1,12 @@
+@use "@angular/material" as mat;
+
+@import "./theming/palette";
+
 :root {
+  /* BASES */
+  --color-white: rgb(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+
   /* GRISES */
   --color-gray-1: rgba(226, 226, 226, 1);
   --color-gray-25: rgba(198, 198, 198, 1);
@@ -6,3 +14,35 @@
   --color-gray-75: rgba(107, 107, 107, 1);
   --color-gray-100: rgba(62, 62, 62, 1);
 }
+
+// DEFINICIÓN DE TEMAS DE COLOR PERSONALIZADOS PARA MATERIAL
+@include mat.core();
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette($primary-light-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
+      accent: mat.define-palette($accent-light-palette, A400)
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette($primary-dark-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
+      accent: mat.define-palette($accent-dark-palette, A400)
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($light-theme);
+
+.dark-mode {
+  @include mat.all-component-colors($dark-theme);
+}
+

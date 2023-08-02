@@ -3,6 +3,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@core/*": ["src/app/core/*"],
+      "@m-admin/*": ["src/app/module/admin/*"],
+      "@m-pages/*": ["src/app/module/pages/*"],
+      "@m-public/*": ["src/app/module/public/*"],
+      "@m-user/*": ["src/app/module/user/*"],
+      "@shared/*": ["src/app/shared/*"],
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

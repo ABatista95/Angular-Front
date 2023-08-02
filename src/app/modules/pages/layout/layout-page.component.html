@@ -1,12 +1,45 @@
-<header class="header">
-</header>
+<div>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer [mode]="'over'" class="nav-drawer">
+      <ul (click)="drawer.toggle()">
+        <li>
+          <a routerLink="">
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="shopping_cart">
+            <mat-icon>dialpad</mat-icon>
+            <span>Detalle</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="#">
+            <mat-icon>dialpad</mat-icon>
+            <span>Contacto</span>
+          </a>
+        </li>
+      </ul>
 
-<div class="main-container">
-  <router-outlet></router-outlet>
+    </mat-drawer>
+
+    <mat-drawer-content>
+      <header class="header">
+        <app-header style="width: 100%" [btnMenu]="drawer"></app-header>
+      </header>
+
+      <main class="main-container">
+        <div class="main-container__content">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p style="font-size: 1.6em">Desarrollado por TingCol</p>
+      </footer>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
 </div>
-
-<footer class="footer">
-  <h4 style="font-size: 1.6em">Desarrollado por TingCol</h4>
-</footer>
-
 

@@ -1,0 +1,13 @@
+
+.nav {
+  width: 100%;
+  background-color: aqua;
+
+  &-h3 {
+    margin: 0;
+  }
+
+  &-toolbar {
+    justify-content: space-between;
+  }
+}

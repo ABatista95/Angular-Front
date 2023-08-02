@@ -41,3 +41,20 @@
   gap: 1em;
   align-items: center;
 }
+
+.caja {
+  margin-top: 24px;
+  background-color: blueviolet;
+  color: white;
+  width: 400px;
+  height: 100px;
+
+  &__cont {
+    height: 60px;
+    width: 100%;
+    background-color: blue;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
