@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "app/core/sass/style-color";
-@import "app/core/sass/normalize";
-@import "app/core/sass/reser-material";
+@use "app/core/sass/style-color";
+@use "app/core/sass/normalize";
+@use "app/core/sass/reser-material";
 
 body {
   font-family: Roboto, "Helvetica Neue", 'Poppins', sans-serif !important;

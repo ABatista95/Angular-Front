@@ -21,8 +21,10 @@
 $light-theme: mat.define-light-theme(
   (
     color: (
-      primary: mat.define-palette($primary-light-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
-      accent: mat.define-palette($accent-light-palette, A400)
+            basic: mat.define-palette($primary-light-palette, 500),
+            primary: mat.define-palette($primary-light-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
+            accent: mat.define-palette($accent-light-palette, A400),
+            warn: mat.define-palette($accent-light-palette, 500)
     ),
     typography: mat.define-typography-config(),
     density: 0,
@@ -32,8 +34,9 @@ $light-theme: mat.define-light-theme(
 $dark-theme: mat.define-dark-theme(
   (
     color: (
-      primary: mat.define-palette($primary-dark-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
-      accent: mat.define-palette($accent-dark-palette, A400)
+            basic: mat.define-palette($primary-dark-palette, 500),
+            primary: mat.define-palette($primary-dark-palette, 500), // Se procede a pasar paleta de color y definir el color a usar.
+            accent: mat.define-palette($accent-dark-palette, A400)
     ),
     typography: mat.define-typography-config(),
     density: 0,
